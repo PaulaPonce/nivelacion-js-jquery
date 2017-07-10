@@ -7,6 +7,13 @@ $(document).ready( function(){
 
 });
 
+/*
+* Función que se encarga de pintar una noticia en el párrafo que está dentro de NEWS
+*/
+function printNews(){
+	$(".callout-news p").append("NUEVAS RECETAS");
+}
+printNews();
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
@@ -25,8 +32,6 @@ function renderHighlightedRecipes(recipesArray) {
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
 }
-
-
 
 /*
 * Función que se encarga de pintar todas las actividades
