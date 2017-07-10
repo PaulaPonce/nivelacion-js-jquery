@@ -21,6 +21,16 @@ printNews();
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+	
+	var foundTrue = false;
+	//Recorrer el arreglo recipesArray
+	recipesArray.forEach(function(recipe){
+		if(recipe.highlighted){
+			foundTrue = true;
+			//llama a la función renderRecipe con el parámetro que cumple la condición
+			renderRecipe(recipe);
+		}
+	});
 }
 
 /*
