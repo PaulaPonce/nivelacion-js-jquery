@@ -69,4 +69,14 @@ function renderActivities(activitiesArray) {
 */
 function renderActivity(recipe) {
 	console.log(recipe);
+	// set up underscore template variable
+	_.templateSettings.variable = 'activity'; //template variable
+	// this is what hooks into the template in the HTML above
+	var template = _.template(
+		$("script.template").html()
+	);
+	$(".list-activities").append(template(recipe));	
 }
+
+
+
