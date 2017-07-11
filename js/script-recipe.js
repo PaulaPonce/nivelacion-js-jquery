@@ -22,6 +22,13 @@ $(document).ready(function(){
 		$(".js-show-recipe").removeClass("active");
 		$("div.recipe").addClass("make");
 	});
+
+	/*
+	* Función para regresar a index.html al hacer click en flecha superior
+	*/
+	$(".js-back").on("click", function(){
+		window.location.href="index.html";
+	})
 });
 
 	
