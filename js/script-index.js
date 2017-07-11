@@ -4,7 +4,8 @@ $(document).ready( function(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
-
+	//La variable "recipesArray" esta declarada en el archivo "data/activities.js"
+	renderActivities(activitiesArray);
 });
 
 /*
@@ -51,6 +52,14 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+	//Recorre el arreglo activitiesArray y por cada objeto llama a la función renderActivity
+	activitiesArray.forEach(function(recipe){
+		renderActivity(recipe);
+	});
+	//Validación
+	if(activitiesArray.length>0){
+		return $(".wrapper-message").hide();
+	}
 }
 
 /*
@@ -59,5 +68,5 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+	console.log(recipe);
 }
